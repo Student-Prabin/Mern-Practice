@@ -2,7 +2,7 @@ import MenuItems from "../components/MenuItems";
 
 export default function Menu() {
   return (
-    <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-4 w-[80vw] m-auto">
+    <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-4">
 
       <div className="flex flex-col p-4 gap-7">
         <h1 className="text-4xl self-center">Our Menu</h1>
@@ -17,7 +17,7 @@ export default function Menu() {
         </div>
 
       </div>
-      <img src="https://www.w3schools.com/w3images/tablesetting.jpg" alt="" />
+      <img className="opacity-75" src="https://www.w3schools.com/w3images/tablesetting.jpg" alt="menu" />
     </div>
   )
 }

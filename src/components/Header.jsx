@@ -5,9 +5,9 @@ export default function Header() {
     <div className="bg-white z-1 shadow-lg p-2 flex justify-between sticky top-0">
       <Button text='Gourmet au Catering' />
       <nav className="flex gap-5 max-sm:hidden">
-        <Button text='About' />
-        <Button text='Menu' />
-        <Button text='Contact' />
+        <Button link='about' text='About' />
+        <Button link='menu' text='Menu' />
+        <Button link='contact' text='Contact' />
       </nav>
     </div >
   )

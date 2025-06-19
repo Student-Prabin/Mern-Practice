@@ -13,11 +13,15 @@ export default function Home() {
             Le Catering
           </h1>
         </div>
-        <About />
-        <hr className="w-[80vw] m-auto" />
-        <Menu />
-        <hr className="w-[80vw] m-auto" />
-        <Contact />
+        <div className="w-[80vw] m-auto flex flex-col gap-10">
+          <br id="about" />
+          <About />
+          <hr id='menu' className="w-[80vw] m-auto" />
+          <Menu />
+          <hr div id='contact' className="w-[80vw] m-auto" />
+          <Contact />
+
+        </div>
         <div className="bg-gray-200 h-30 flex items-center justify-center">Made by &nbsp;<span className="underline">Prabin Dahal</span></div>
       </div>
     </ div>
