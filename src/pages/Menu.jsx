@@ -5,7 +5,7 @@ export default function Menu() {
     <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-4">
 
       <div className="flex flex-col p-4 gap-7">
-        <h1 className="text-4xl self-center">Our Menu</h1>
+        <h1 className="text-4xl self-center font-new tracking-wider">Our Menu</h1>
         <div className="flex flex-col justify-between h-[100%]">
           <MenuItems title='Bread Basket' desc='Assortment of fresh baked fruit breads and muffins 5.50' />
           <MenuItems title='Honey Almond Granola with Fruits' desc='Natural cereal of honey toasted oats, raisins, almonds and dates 7.00' />

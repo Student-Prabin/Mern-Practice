@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <div className="flex flex-col gap-15">
 
-        <div className="h-[570px] bg-[url(https://www.w3schools.com/w3images/hamburger.jpg)] bg-cover bg-center bg-no-repeat flex items-end pl-6 pb-7">
+        <div id="top" className="h-[570px] bg-[url(https://www.w3schools.com/w3images/hamburger.jpg)] bg-cover bg-center bg-no-repeat flex items-end pl-6 pb-7">
           <h1 className="text-3xl opacity-50 tracking-wider">
             Le Catering
           </h1>
