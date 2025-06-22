@@ -1,29 +1,54 @@
-import About from "./About";
-import Contact from "./Contact";
-import Menu from "./Menu";
-
+import { faker } from '@faker-js/faker';
+import { Button } from '@material-tailwind/react';
+import {
+  List,
+  ListItem,
+  ListItemSuffix,
+  Chip,
+  Card,
+} from "@material-tailwind/react";
+import { useState } from 'react';
 
 export default function Home() {
+
+  const [data, setData] = useState([]);
+
+  const handleClick = () => {
+    setData((prev) => [...prev, faker.science.chemicalElement()]);
+  }
+
+  const handleDelete = (dlt) => {
+    setData((prev) => prev.filter((_, index) => index !== dlt));
+  }
+
   return (
-    <div>
-      <div className="flex flex-col gap-15">
+    <div className='p-5'>
 
-        <div id="top" className="h-[570px] bg-[url(https://www.w3schools.com/w3images/hamburger.jpg)] bg-cover bg-center bg-no-repeat flex items-end pl-6 pb-7">
-          <h1 className="text-3xl opacity-50 tracking-wider">
-            Le Catering
-          </h1>
-        </div>
-        <div className="w-[80vw] m-auto flex flex-col gap-10">
-          <br id="about" />
-          <About />
-          <hr id='menu' className="w-[80vw] m-auto" />
-          <Menu />
-          <hr div id='contact' className="w-[80vw] m-auto" />
-          <Contact />
+      <Button onClick={handleClick} className='cursor-pointer'> Add Fake Data</Button>
 
-        </div>
-        <div className="bg-gray-200 h-30 flex items-center justify-center">Made by &nbsp;<span className="underline">Prabin Dahal</span></div>
-      </div>
-    </ div>
+      {data.length > 0 && <Card className="w-96 mt-6">
+        <List>
+          {data.map((chemical, index) => {
+            return <ListItem key={index}>
+              {chemical.name}
+              <ListItemSuffix className='flex gap-5'>
+                <Chip
+                  value={chemical.symbol}
+                  variant="ghost"
+                  size="sm"
+                  className="rounded-full"
+                />
+                <Button size='sm' className='text-[10px]' color='pink' onClick={() => handleDelete(index)}>Delete</Button>
+              </ListItemSuffix>
+            </ListItem>
+          })}
+
+
+        </List>
+      </Card>
+      }
+
+
+    </div>
   )
 }
