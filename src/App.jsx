@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 import RootLayout from "./components/RootLayout";
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
+
 
 export default function App() {
 
