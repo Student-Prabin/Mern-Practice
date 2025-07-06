@@ -2,6 +2,8 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import RootLayout from "./components/RootLayout";
 import Home from "./pages/home/Home";
 
+import MealItems from "./pages/meal_items/MealItems";
+
 
 export default function App() {
 
@@ -13,6 +15,9 @@ export default function App() {
         {
           index: true,
           element: <Home />,
+        }, {
+          path: 'mealCategory/:category',
+          element: <MealItems />
         }
       ],
     },

@@ -1,8 +1,8 @@
-import MealCategory from "../meal_category/MealCategory";
+import MealCategory from '../meal_category/MealCategory'
 
 export default function Home() {
   return (
-    <div>Home
+    <div>
       <MealCategory />
     </div>
   )
