@@ -38,7 +38,7 @@ export default function MealCategory() {
         <Card className='p-5'>
           <List>
             {data && data.categories.map((category) => {
-              return <div onClick={() => nav(`mealCategory/${category.strCategory}`)} key={category.idCategory} className='space-y-3 mb-5 bg-gray-100 p-2 rounded-2xl'>
+              return <div onClick={() => nav(`mealCategory/${category.strCategory}`)} key={category.idCategory} className='space-y-3 mb-5 bg-gray-100 p-2 rounded-2xl hover:bg-gray-300 cursor-pointer'>
 
                 <div className='flex items-center gap-4'>
                   <Avatar variant="circular" size='xl' alt="candice" src={category.strCategoryThumb} />
