@@ -2,15 +2,17 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   Typography,
-  Avatar,
-  Tooltip,
 } from "@material-tailwind/react";
 
+import { useNavigate } from "react-router";
+
 export function MealItemCard({ meal }) {
+  const nav = useNavigate();
+
   return (
-    <Card className=" overflow-hidden">
+    <Card className=" overflow-hidden cursor-pointer"
+      onClick={() => nav(`/meal/${meal.idMeal}`)}>
       <CardHeader
         floated={false}
         shadow={false}

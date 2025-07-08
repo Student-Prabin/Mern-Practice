@@ -3,6 +3,7 @@ import RootLayout from "./components/RootLayout";
 import Home from "./pages/home/Home";
 
 import MealItems from "./pages/meal_items/MealItems";
+import Meal from "./pages/meal/Meal";
 
 
 export default function App() {
@@ -18,6 +19,9 @@ export default function App() {
         }, {
           path: 'mealCategory/:category',
           element: <MealItems />
+        }, {
+          path: 'meal/:id',
+          element: <Meal />
         }
       ],
     },
