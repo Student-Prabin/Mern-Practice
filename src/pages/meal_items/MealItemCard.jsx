@@ -11,8 +11,11 @@ export function MealItemCard({ meal }) {
   const nav = useNavigate();
 
   return (
-    <Card className=" overflow-hidden cursor-pointer"
-      onClick={() => nav(`/meal/${meal.idMeal}`)}>
+    <Card
+      className="transition-transform transform hover:translate-y-1 hover:shadow-amber-700 overflow-hidden cursor-pointer"
+
+      onClick={() => nav(`/meal/${meal.idMeal}`)}
+    >
       <CardHeader
         floated={false}
         shadow={false}
@@ -22,16 +25,14 @@ export function MealItemCard({ meal }) {
         <img
           className="w-full"
           src={meal.strMealThumb}
-          alt="ui/ux review check"
+          alt={meal.strMeal}
         />
       </CardHeader>
       <CardBody>
         <Typography variant="h4" color="blue-gray">
           {meal.strMeal}
         </Typography>
-
       </CardBody>
-
     </Card>
   );
 }

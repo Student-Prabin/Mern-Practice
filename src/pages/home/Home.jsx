@@ -5,7 +5,7 @@ export default function HomePage() {
   const nav = useNavigate();
   return (
     <div className="min-h-screen flex flex-col justify-between bg-white font-poppins">
-      {/* Hero Section */}
+
       <div
         className="relative h-80 md:h-[420px] w-full bg-center bg-cover flex items-center justify-center"
         style={{
@@ -35,7 +35,7 @@ export default function HomePage() {
 
       {/* About Section */}
       <section className="max-w-7xl mx-auto py-16 px-4 space-y-24">
-        {/* Box 1 */}
+
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-32">
           <div className="md:w-1/2 rounded-xl overflow-hidden shadow-lg">
             <img
@@ -61,7 +61,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Box 2 */}
+
         <div className="flex flex-col items-center gap-8 md:gap-32 md:flex-row-reverse">
           <div className="md:w-1/2 rounded-xl overflow-hidden shadow-lg">
             <img
@@ -86,7 +86,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Box 3 */}
+
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-32">
           <div className="md:w-1/2 rounded-xl overflow-hidden shadow-lg">
             <img

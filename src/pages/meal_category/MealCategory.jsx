@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import MealCategoryLoader from "./MealCategoryLoader"; // Adjust the path as needed
+import MealCategoryLoader from "./MealCategoryLoader";
+
 
 export default function MealCategory() {
   const nav = useNavigate();
@@ -32,7 +33,7 @@ export default function MealCategory() {
     item.strCategory.toLowerCase().includes(search.toLowerCase())
   );
 
-  if (load) return <MealCategoryLoader />; // Use your skeleton loader here
+  if (load) return <MealCategoryLoader />;
 
   if (err)
     return (
@@ -65,7 +66,7 @@ export default function MealCategory() {
         {filteredData.map((category) => (
           <div
             key={category.idCategory}
-            onClick={() => nav(`mealCategory/${category.strCategory}`)}
+            onClick={() => nav(`/mealCategory/${category.strCategory}`)}
             className="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl cursor-pointer group transition-transform hover:-translate-y-1"
           >
             <img
