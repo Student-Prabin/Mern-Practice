@@ -1,65 +1,37 @@
-import { Card, List, Typography } from '@material-tailwind/react'
-import React from 'react'
-
 export default function MealCategoryLoader() {
+  const placeholderCount = 6;
+
   return (
-    <div className='p-10'>
-      <Card className='p-5 animate-pulse'>
-        <List>
-
-          <ListLoad />
-          <ListLoad />
-          <ListLoad />
-          <ListLoad />
-
-
-
-        </List>
-      </Card>
-    </div>
-  )
-}
-
-
-
-
-function ListLoad() {
-  return (
-    <div className='space-y-3 mb-5'>
-      <div className='flex items-center gap-4'>
-        <div className='h-[70px] w-[70px] rounded-full bg-gray-300'>
-
-        </div>
-        <Typography variant="h6" className='bg-gray-300 h-2 w-[70px] rounded-full'>
-        </Typography>
-
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-pink-50 p-6">
+      <div className="py-16 px-4 text-center max-w-xl mx-auto">
+        {/* Heading */}
+        <div className="h-12 w-64 bg-orange-100 rounded-md mx-auto mb-4 animate-pulse" />
+        {/* Subheading */}
+        <div className="h-6 w-96 bg-orange-100 rounded-md mx-auto mb-10 animate-pulse" />
+        {/* Search bar*/}
+        <div className="h-10 w-full max-w-md mx-auto rounded-xl border border-orange-100 bg-orange-50 animate-pulse" />
       </div>
 
-      <div>
-        <Typography
-          as="div"
-          variant="paragraph"
-          className="mb-2 h-2 w-full rounded-full bg-gray-300"
-        >
-          &nbsp;
-        </Typography>
-        <Typography
-          as="div"
-          variant="paragraph"
-          className="mb-2 h-2 w-full rounded-full bg-gray-300"
-        >
-          &nbsp;
-        </Typography>
-        <Typography
-          as="div"
-          variant="paragraph"
-          className="mb-2 h-2 w-full rounded-full bg-gray-300"
-        >
-          &nbsp;
-        </Typography>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {[...Array(placeholderCount)].map((_, i) => (
+          <div
+            key={i}
+            className="relative rounded-2xl shadow-sm overflow-hidden bg-white"
+          >
+            {/* Image placeholder */}
+            <div className="h-60 bg-orange-50 animate-pulse" />
 
+            {/* Overlay placeholder */}
+            <div className="absolute inset-0 bg-black/10" />
+
+            {/* Text placeholders */}
+            <div className="absolute bottom-0 p-5 w-full">
+              <div className="h-6 w-3/4 bg-orange-100 rounded-md mb-2 animate-pulse" />
+              <div className="h-4 w-full max-w-xs bg-orange-100 rounded-md animate-pulse" />
+            </div>
+          </div>
+        ))}
       </div>
-
     </div>
-  )
+  );
 }

@@ -4,6 +4,7 @@ import Home from "./pages/home/Home";
 
 import MealItems from "./pages/meal_items/MealItems";
 import Meal from "./pages/meal/Meal";
+import MealCategory from "./pages/meal_category/MealCategory";
 
 
 export default function App() {
@@ -17,6 +18,10 @@ export default function App() {
           index: true,
           element: <Home />,
         }, {
+          path: 'mealCategory',
+          element: <MealCategory />
+        },
+        {
           path: 'mealCategory/:category',
           element: <MealItems />
         }, {
