@@ -2,7 +2,7 @@ import { Typography } from "@material-tailwind/react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import MealLoader from "./MealLoader"; // adjust path if needed
+import MealLoader from "./MealLoader";
 
 export default function Meal() {
   const [data, setData] = useState(null);
@@ -16,7 +16,7 @@ export default function Meal() {
       );
       setData(response.data);
     } catch (err) {
-      // handle error if needed
+
     }
   };
 
