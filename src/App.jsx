@@ -1,37 +1,35 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
-import RootLayout from "./components/RootLayout";
-import Home from "./pages/home/Home";
+import { createBrowserRouter, RouterProvider } from "react-router"
 
-import MealItems from "./pages/meal_items/MealItems";
-import Meal from "./pages/meal/Meal";
-import MealCategory from "./pages/meal_category/MealCategory";
+import UserList from "./features/users/UserList";
+import UserForm from "./features/users/UserForm";
+import RootLayout from "./components/RootLayout";
 
 
 export default function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: '/',
       element: <RootLayout />,
       children: [
         {
           index: true,
-          element: <Home />,
-        }, {
-          path: 'mealCategory',
-          element: <MealCategory />
+          element: <UserList />
         },
         {
-          path: 'mealCategory/:category',
-          element: <MealItems />
-        }, {
-          path: 'meal/:id',
-          element: <Meal />
+          path: 'add-user',
+          element: <UserForm />
         }
-      ],
+
+      ]
     },
+
+
   ]);
-  return (
-    <RouterProvider router={router} />
-  )
+
+
+
+
+
+  return <RouterProvider router={router} />
 }
