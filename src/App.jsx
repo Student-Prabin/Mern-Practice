@@ -1,26 +1,38 @@
 import { createBrowserRouter, RouterProvider } from "react-router"
-
-import UserList from "./features/users/UserList";
-import UserForm from "./features/users/UserForm";
-import RootLayout from "./components/RootLayout";
-
+import RootLayOut from "./components/RootLayout";
+import NowPlaying from "./features/now_playing/NowPlaying";
+import SearchPage from "./features/search/SearchPage";
+import Popular from "./features/popular/Popuar";
+import TopRated from "./features/top_rated/TopRated";
+import Upcoming from "./features/upcoming/Upcoming";
 
 export default function App() {
 
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <RootLayout />,
+      element: <RootLayOut />,
       children: [
         {
           index: true,
-          element: <UserList />
+          element: <NowPlaying />
         },
         {
-          path: 'add-user',
-          element: <UserForm />
+          path: 'movie-search/:query',
+          element: <SearchPage />
+        },
+        {
+          path: 'popular',
+          element: <Popular />
+        },
+        {
+          path: 'top_rated',
+          element: <TopRated />
+        },
+        {
+          path: 'upcoming',
+          element: <Upcoming />
         }
-
       ]
     },
 

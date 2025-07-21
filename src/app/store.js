@@ -1,12 +1,15 @@
+
 import { configureStore } from "@reduxjs/toolkit";
-import { userSlice } from "../features/users/userSlice";
-
-
-
-
+import { movieApi } from "../shared/movieApi";
 
 export const store = configureStore({
   reducer: {
-    userSlice: userSlice.reducer
-  }
+    [movieApi.reducerPath]: movieApi.reducer
+  },
+
+  //caching, polling ,invalidation
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat([
+      movieApi.middleware
+    ]),
 })
