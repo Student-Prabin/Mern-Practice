@@ -18,7 +18,7 @@ export default function App() {
           element: <NowPlaying />
         },
         {
-          path: 'movie-search/:query',
+          path: 'movie-search',
           element: <SearchPage />
         },
         {
